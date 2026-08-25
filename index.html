@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K-MBSR · 마음챙김 명상의 체계와 기본기</title>
+<meta name="description" content="(사)한국명상학회 인정 K-MBSR 기초교육 과정. 2026년 9월 7일 개강, 온라인 6회 + 대면 집중수련 1회, 총 7회기. 송영미 박사 진행.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦋</text></svg>">
+<style>
+:root{
+  --color-fresh-grass:#8ed462;
+  --color-cream-paper:#f5f1e4;
+  --color-ink-black:#2c2e2a;
+  --color-pure-white:#ffffff;
+  --color-sandstone:#e0dbce;
+  --color-stone-gray:#80827f;
+  --color-hairline-mist:#d5d5d4;
+  --color-pure-ink:#000000;
+  --color-sky-pop:#2ba0ff;
+  --color-coral-pop:#ff705d;
+  --color-sunshine-pop:#f5e211;
+
+  --font-inter:'Inter','Noto Sans KR',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+
+  --text-body-sm:15px;
+  --text-body-lg:18px;
+  --text-subheading:20px;
+  --text-heading-sm:30px;
+
+  --spacing-4:4px;
+  --spacing-20:20px;
+  --spacing-60:60px;
+  --spacing-136:136px;
+
+  --page-max-width:1200px;
+
+  --radius-small:10px;
+  --radius-full:50px;
+  --radius-illustration:63.75px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:120px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--color-cream-paper);
+  color:var(--color-ink-black);
+  font-family:var(--font-inter);
+  font-size:var(--text-body-lg);
+  line-height:1.5;
+  font-weight:400;
+  overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block;}
+a{color:inherit;}
+
+.wrap{max-width:var(--page-max-width);margin:0 auto;padding:0 24px;}
+.section{padding:clamp(60px,9vw,120px) 0;}
+.section--tight{padding:clamp(44px,6vw,80px) 0;}
+
+/* ---------- Navigation ---------- */
+.nav-shell{position:sticky;top:0;z-index:100;padding:18px 24px;}
+.nav{
+  max-width:var(--page-max-width);margin:0 auto;
+  background:var(--color-pure-white);
+  border-radius:var(--radius-full);
+  display:flex;align-items:center;gap:8px;
+  padding:9px 9px 9px 20px;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.brand-mark{
+  width:40px;height:40px;border-radius:var(--radius-small);
+  background:var(--color-fresh-grass);
+  display:grid;place-items:center;font-size:20px;line-height:1;
+}
+.brand-name{font-size:17px;font-weight:500;letter-spacing:-0.01em;white-space:nowrap;}
+.nav-links{display:flex;align-items:center;margin-left:auto;}
+.nav-links a{
+  font-size:var(--text-body-sm);font-weight:500;text-decoration:none;
+  padding:10px 17px;border-radius:var(--radius-full);white-space:nowrap;
+  transition:background .18s ease;
+}
+.nav-links a:hover{background:var(--color-cream-paper);}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--color-cream-paper);
+  border-radius:var(--radius-full);
+  padding:11px 16px 11px 20px;
+  font-size:var(--text-body-sm);font-weight:500;text-decoration:none;
+  white-space:nowrap;flex-shrink:0;
+  transition:background .18s ease;
+}
+.nav-cta:hover{background:var(--color-sandstone);}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--color-sky-pop);flex-shrink:0;}
+.dot--white{background:var(--color-pure-white);}
+.nav-toggle{
+  display:none;width:40px;height:40px;border:0;padding:0;flex-shrink:0;
+  border-radius:50%;background:var(--color-fresh-grass);
+  cursor:pointer;place-items:center;
+}
+.nav-toggle span{display:block;width:16px;height:2px;background:var(--color-ink-black);box-shadow:0 -5px 0 var(--color-ink-black),0 5px 0 var(--color-ink-black);}
+.nav-panel{display:none;}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(28px,4vw,56px) 0 0;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid var(--color-coral-pop);
+  border-radius:var(--radius-small);
+  padding:7px 14px;font-size:var(--text-body-sm);font-weight:500;
+  margin-bottom:28px;
+}
+.eyebrow .dot{width:9px;height:9px;background:var(--color-coral-pop);}
+.display{
+  font-size:clamp(64px,11.5vw,144px);
+  line-height:0.95;letter-spacing:-0.06em;font-weight:500;
+  margin:0 0 4px;
+}
+.display-ko{
+  font-size:clamp(38px,6.4vw,81px);
+  line-height:1.12;letter-spacing:-0.05em;font-weight:500;
+  margin:0 0 32px;
+}
+.hero-sub{font-size:var(--text-subheading);line-height:1.6;max-width:640px;margin:0 0 36px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  border-radius:var(--radius-full);
+  padding:15px 20px 15px 26px;
+  font-size:var(--text-body-sm);font-weight:500;
+  text-decoration:none;border:1px solid transparent;
+  transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn--coral{background:var(--color-coral-pop);color:var(--color-pure-white);}
+.btn--ghost{background:var(--color-pure-white);color:var(--color-ink-black);}
+.btn--outline{background:transparent;border-color:var(--color-ink-black);}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:0 40px;margin-top:44px;
+  padding-top:26px;border-top:1px solid var(--color-hairline-mist);
+}
+.hero-meta div{padding:10px 0;}
+.hero-meta dt{font-size:13px;color:var(--color-stone-gray);font-weight:500;margin-bottom:4px;}
+.hero-meta dd{margin:0;font-size:17px;font-weight:500;letter-spacing:-0.01em;}
+.hero-art{margin-top:clamp(24px,4vw,48px);}
+
+/* ---------- Section headings ---------- */
+.section-label{
+  font-size:var(--text-body-sm);font-weight:500;color:var(--color-stone-gray);
+  margin:0 0 18px;display:flex;align-items:center;gap:10px;
+}
+.section-label::before{content:"";width:26px;height:2px;background:var(--color-fresh-grass);}
+h2.h-lg{
+  font-size:clamp(34px,5.2vw,81px);line-height:1.1;letter-spacing:-0.05em;
+  font-weight:500;margin:0 0 20px;
+}
+h2.h-md{
+  font-size:clamp(30px,3.9vw,53px);line-height:1.15;letter-spacing:-0.04em;
+  font-weight:500;margin:0 0 20px;
+}
+h3{font-size:var(--text-heading-sm);line-height:1.2;letter-spacing:-0.02em;font-weight:500;margin:0 0 12px;}
+.lead{font-size:var(--text-subheading);line-height:1.65;max-width:720px;margin:0;}
+.muted{color:var(--color-stone-gray);}
+
+/* ---------- Cards ---------- */
+.card{
+  background:var(--color-pure-white);
+  border-radius:var(--radius-full);
+  padding:clamp(28px,3.4vw,44px);
+}
+.card--sand{background:var(--color-sandstone);}
+.card--outline{background:transparent;border:1px solid var(--color-ink-black);}
+.card p:last-child{margin-bottom:0;}
+.grid{display:grid;gap:20px;}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px);align-items:center;}
+.split--art{grid-template-columns:0.9fr 1.1fr;}
+
+/* ---------- Quote strip ---------- */
+.quote-card{
+  background:var(--color-pure-white);border-radius:var(--radius-full);
+  padding:32px 34px;display:flex;flex-direction:column;gap:18px;height:100%;
+}
+.quote-card p{margin:0;font-size:17px;line-height:1.6;letter-spacing:-0.01em;}
+.quote-card .stamp{font-size:13px;color:var(--color-stone-gray);margin-top:auto;}
+.quote-mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  font-size:20px;font-weight:500;line-height:1;color:var(--color-ink-black);}
+
+/* ---------- Flow chain ---------- */
+.flow{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none;}
+.flow li{
+  background:var(--color-pure-white);border-radius:var(--radius-full);
+  padding:11px 20px;font-size:var(--text-body-sm);font-weight:500;
+  display:flex;align-items:center;gap:10px;
+}
+.flow li .dot{width:8px;height:8px;background:var(--color-fresh-grass);}
+
+/* ---------- Capability trio ---------- */
+.cap{background:var(--color-pure-white);border-radius:var(--radius-illustration);padding:34px 32px 38px;}
+.cap svg{margin-bottom:22px;}
+.cap h3{margin-bottom:10px;}
+.cap p{margin:0;font-size:17px;line-height:1.6;}
+
+/* ---------- Teacher ---------- */
+.teacher-photo{
+  background:var(--color-sandstone);border-radius:var(--radius-illustration);
+  padding:34px;text-align:center;
+}
+.portrait{
+  width:100%;max-width:280px;aspect-ratio:1/1;margin:0 auto;
+  border-radius:50%;overflow:hidden;position:relative;
+  background:var(--color-pure-white);
+  border:3px solid var(--color-ink-black);
+}
+.portrait img{position:absolute;width:130%;max-width:none;height:auto;left:-24%;top:-15.5%;}
+.portrait .fallback{display:none;position:absolute;inset:0;width:100%;height:100%;}
+.portrait.is-fallback img{display:none;}
+.portrait.is-fallback .fallback{display:block;}
+.portrait.is-fallback{border-color:transparent;background:transparent;}
+.teacher-photo .name{font-size:22px;font-weight:500;margin:22px 0 4px;letter-spacing:-0.02em;}
+.teacher-photo .role{font-size:var(--text-body-sm);color:var(--color-stone-gray);margin:0;font-style:italic;}
+.credentials{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:11px;}
+.credentials li{position:relative;padding-left:22px;font-size:17px;line-height:1.55;}
+.credentials li::before{
+  content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;
+  background:var(--color-fresh-grass);
+}
+
+/* ---------- Schedule ---------- */
+.sched{display:grid;gap:20px;grid-template-columns:1.15fr 0.85fr;}
+.sched-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px;}
+.sched-list li{display:flex;gap:14px;font-size:17px;line-height:1.55;}
+.sched-list .tag{
+  flex-shrink:0;border-radius:var(--radius-small);padding:2px 10px;
+  font-size:13px;font-weight:500;height:fit-content;margin-top:3px;
+  border:1px solid var(--color-hairline-mist);
+}
+.tag--grass{background:var(--color-fresh-grass);border-color:var(--color-fresh-grass);}
+.tag--sky{background:var(--color-sky-pop);border-color:var(--color-sky-pop);color:var(--color-pure-white);}
+.tag--coral{background:var(--color-coral-pop);border-color:var(--color-coral-pop);color:var(--color-pure-white);}
+.tag--sun{background:var(--color-sunshine-pop);border-color:var(--color-sunshine-pop);}
+
+/* ---------- Curriculum table ---------- */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius-full);}
+table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  background:var(--color-pure-white);min-width:720px;
+}
+th,td{text-align:left;padding:20px 22px;vertical-align:top;font-size:16px;line-height:1.5;}
+thead th{
+  font-size:13px;font-weight:500;color:var(--color-stone-gray);
+  border-bottom:1px solid var(--color-ink-black);padding-top:30px;
+}
+thead th:first-child{padding-left:34px;}
+thead th:last-child{padding-right:34px;}
+tbody td{border-bottom:1px solid var(--color-hairline-mist);}
+tbody td:first-child{padding-left:34px;font-weight:500;white-space:nowrap;}
+tbody td:last-child{padding-right:34px;}
+tbody tr:last-child td{border-bottom:0;padding-bottom:34px;}
+.mode{
+  display:inline-flex;align-items:center;gap:8px;border-radius:var(--radius-small);
+  padding:3px 10px;font-size:13px;font-weight:500;white-space:nowrap;
+}
+.mode--online{border:1px solid var(--color-sky-pop);}
+.mode--offline{border:1px solid var(--color-coral-pop);background:var(--color-coral-pop);color:var(--color-pure-white);}
+.session-no{font-size:20px;letter-spacing:-0.02em;}
+.session-date{display:block;font-size:14px;color:var(--color-stone-gray);font-weight:400;margin-top:3px;}
+
+/* ---------- Price ---------- */
+.price-row{display:flex;flex-wrap:wrap;gap:20px;align-items:stretch;}
+.price-box{
+  flex:1 1 260px;background:var(--color-pure-white);border-radius:var(--radius-full);
+  padding:34px 36px;
+}
+.price-box--early{background:var(--color-fresh-grass);}
+.price-box .k{font-size:var(--text-body-sm);font-weight:500;margin:0 0 10px;}
+.price-box .v{font-size:clamp(34px,4.4vw,53px);line-height:1.1;letter-spacing:-0.04em;font-weight:500;margin:0;}
+.price-box .n{font-size:14px;color:var(--color-stone-gray);margin:12px 0 0;}
+.price-box--early .n{color:var(--color-ink-black);}
+.strike{text-decoration:line-through;text-decoration-thickness:2px;}
+
+/* ---------- Steps ---------- */
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:16px;}
+.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start;font-size:17px;line-height:1.55;}
+.steps li > span{min-width:0;}
+.steps li strong{white-space:nowrap;}
+.steps li::before{
+  content:counter(s);flex-shrink:0;width:32px;height:32px;border-radius:50%;
+  background:var(--color-ink-black);color:var(--color-cream-paper);
+  display:grid;place-items:center;font-size:15px;font-weight:500;
+}
+
+/* ---------- Apply band ---------- */
+.apply{background:var(--color-ink-black);color:var(--color-cream-paper);border-radius:var(--radius-illustration);padding:clamp(36px,5vw,72px);}
+.apply h2{color:var(--color-cream-paper);}
+.apply .steps li::before{background:var(--color-fresh-grass);color:var(--color-ink-black);}
+.apply .muted{color:var(--color-hairline-mist);}
+
+/* ---------- Reviews ---------- */
+.review-group{margin-top:44px;}
+.review-group > h3{
+  display:flex;align-items:baseline;gap:14px;margin-bottom:22px;
+  font-size:clamp(22px,2.6vw,30px);letter-spacing:-0.02em;
+}
+.review-group .num{
+  font-size:15px;font-weight:500;width:32px;height:32px;flex-shrink:0;
+  border-radius:50%;display:grid;place-items:center;align-self:center;
+  border:1px solid var(--color-ink-black);
+}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:14px;}
+details{
+  background:var(--color-pure-white);border-radius:var(--radius-full);
+  padding:24px 34px;
+}
+details[open]{background:var(--color-pure-white);}
+summary{
+  list-style:none;cursor:pointer;font-size:var(--text-subheading);font-weight:500;
+  letter-spacing:-0.02em;display:flex;align-items:center;gap:16px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:"";margin-left:auto;flex-shrink:0;width:26px;height:26px;border-radius:50%;
+  background:var(--color-fresh-grass);
+  background-image:linear-gradient(var(--color-ink-black),var(--color-ink-black)),linear-gradient(var(--color-ink-black),var(--color-ink-black));
+  background-size:12px 2px,2px 12px;background-position:center,center;background-repeat:no-repeat;
+  transition:transform .2s ease;
+}
+details[open] summary::after{transform:rotate(45deg);}
+details p{margin:14px 0 0;font-size:17px;line-height:1.6;padding-left:0;}
+
+/* ---------- Contact ---------- */
+.contact-list{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px;}
+.contact-list li{display:flex;align-items:center;gap:14px;font-size:17px;flex-wrap:wrap;}
+.contact-list .k{
+  font-size:13px;font-weight:500;border-radius:var(--radius-small);
+  padding:3px 12px;border:1px solid var(--color-hairline-mist);
+}
+.contact-list a{text-decoration:none;border-bottom:1px solid var(--color-stone-gray);}
+.contact-list a:hover{border-bottom-color:var(--color-ink-black);}
+
+/* ---------- Footer ---------- */
+.footer-band{background:var(--color-sunshine-pop);padding:clamp(56px,7vw,96px) 0 clamp(40px,5vw,60px);}
+.footer-band .display-ko{margin-bottom:20px;}
+.footer-grid{
+  display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end;
+  margin-top:56px;padding-top:26px;border-top:1px solid var(--color-ink-black);
+}
+.footer-grid p{margin:0;font-size:var(--text-body-sm);}
+.footer-links{display:flex;flex-wrap:wrap;gap:20px;}
+.footer-links a{font-size:var(--text-body-sm);text-decoration:none;border-bottom:1px solid var(--color-ink-black);}
+
+/* ---------- Sticky mobile CTA ---------- */
+.mobile-cta{display:none;}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1000px){
+  .nav-links{display:none;}
+  .nav-toggle{display:grid;margin-left:auto;}
+  .nav-toggle[aria-expanded="true"] + .nav-panel{display:grid;}
+  .nav-panel{
+    display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;
+    background:var(--color-pure-white);border-radius:36px;padding:16px;gap:2px;
+  }
+  .nav-panel a{
+    padding:13px 20px;border-radius:var(--radius-full);text-decoration:none;
+    font-size:16px;font-weight:500;
+  }
+  .nav-panel a:hover{background:var(--color-cream-paper);}
+  .nav{position:relative;}
+  .nav-cta{display:none;}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+  .split,.split--art,.sched{grid-template-columns:1fr;}
+  .split--art .art-slot{order:-1;}
+}
+@media (max-width:720px){
+  body{font-size:17px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .card,.quote-card,.price-box,details{border-radius:36px;}
+  .table-scroll{border-radius:36px;}
+  .apply,.cap,.teacher-photo{border-radius:40px;}
+  details{padding:22px 26px;}
+  summary{font-size:18px;}
+  .hero-meta{gap:0 28px;}
+  .mobile-cta{
+    display:block;position:fixed;left:14px;right:14px;bottom:14px;z-index:99;
+  }
+  .mobile-cta a{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    background:var(--color-coral-pop);color:var(--color-pure-white);
+    border-radius:var(--radius-full);padding:17px;text-decoration:none;
+    font-size:16px;font-weight:500;
+  }
+  body{padding-bottom:80px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<div class="nav-shell">
+  <nav class="nav" aria-label="주요 메뉴">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">🦋</span>
+      <span class="brand-name">K-MBSR</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">과정 소개</a>
+      <a href="#teacher">안내자</a>
+      <a href="#curriculum">커리큘럼</a>
+      <a href="#schedule">일정·비용</a>
+      <a href="#reviews">후기</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navPanel" aria-label="메뉴 열기">
+      <span></span>
+    </button>
+    <div class="nav-panel" id="navPanel">
+      <a href="#about">과정 소개</a>
+      <a href="#teacher">안내자</a>
+      <a href="#curriculum">커리큘럼</a>
+      <a href="#schedule">일정·비용</a>
+      <a href="#reviews">후기</a>
+      <a href="#faq">FAQ</a>
+      <a href="#apply">신청하기</a>
+    </div>
+    <a class="nav-cta" href="#apply">신청하기 <span class="dot" aria-hidden="true"></span></a>
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>(사)한국명상학회 인정 기초교육 과정</span>
+    <h1 class="display">K-MBSR</h1>
+    <p class="display-ko">마음챙김 명상의<br>체계와 기본기를 배웁니다</p>
+    <p class="hero-sub">몸의 감각을 알아차리는 바디스캔에서 시작해 호흡, 움직임, 생각과 감정, 관계와 일상으로 마음챙김을 확장하는 과학적이고 체계적인 ‘알아차림’ 훈련 과정입니다.</p>
+    <div class="hero-actions">
+      <a class="btn btn--coral" href="#apply">참여 신청하기 <span class="dot dot--white" aria-hidden="true"></span></a>
+      <a class="btn btn--ghost" href="#curriculum">7회기 커리큘럼 보기 <span class="dot" aria-hidden="true"></span></a>
+    </div>
+    <dl class="hero-meta">
+      <div><dt>기간</dt><dd>2026.9.7 — 10.26</dd></div>
+      <div><dt>구성</dt><dd>온라인 6회 + 대면 1회</dd></div>
+      <div><dt>진행</dt><dd>매주 월요일 · 오전반/저녁반</dd></div>
+      <div><dt>안내</dt><dd>송영미 박사</dd></div>
+    </dl>
+  </div>
+
+  <div class="wrap hero-art" aria-hidden="true">
+    <svg viewBox="0 0 1200 400" role="img" style="width:100%;height:auto;">
+      <!-- ground line -->
+      <path d="M0 352 H1200" stroke="#2c2e2a" stroke-width="3"/>
+      <!-- hill -->
+      <path d="M760 352 C820 250 960 240 1030 352 Z" fill="#8ed462" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+      <!-- sun -->
+      <circle cx="1090" cy="120" r="52" fill="#f5e211" stroke="#2c2e2a" stroke-width="3"/>
+      <!-- cushion + seated figure A (center) -->
+      <g>
+        <ellipse cx="300" cy="340" rx="118" ry="26" fill="#ff705d" stroke="#2c2e2a" stroke-width="3"/>
+        <path d="M240 340 C240 250 268 196 300 196 C332 196 360 250 360 340 Z" fill="#2ba0ff" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M242 322 C210 316 190 332 186 344 C200 350 226 348 244 340" fill="#2ba0ff" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M358 322 C390 316 410 332 414 344 C400 350 374 348 356 340" fill="#2ba0ff" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="300" cy="158" r="42" fill="#f5f1e4" stroke="#2c2e2a" stroke-width="3"/>
+        <path d="M300 116 C336 116 348 140 344 158 C330 140 270 140 256 158 C252 140 264 116 300 116 Z" fill="#2c2e2a"/>
+        <path d="M286 160 q6 6 12 0 M310 160 q6 6 12 0" stroke="#2c2e2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M292 178 q9 8 18 0" stroke="#2c2e2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- standing figure B (left, walking meditation) -->
+      <g>
+        <path d="M96 352 V282" stroke="#2c2e2a" stroke-width="3"/>
+        <path d="M130 352 V286" stroke="#2c2e2a" stroke-width="3"/>
+        <path d="M84 288 C84 232 96 206 114 206 C132 206 144 232 144 288 Z" fill="#8ed462" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M86 234 C64 250 60 274 68 288" stroke="#2c2e2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M142 234 C164 250 168 274 160 288" stroke="#2c2e2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle cx="114" cy="176" r="30" fill="#f5f1e4" stroke="#2c2e2a" stroke-width="3"/>
+        <path d="M114 146 C140 146 146 164 142 178 C130 162 98 162 86 178 C82 164 88 146 114 146 Z" fill="#2c2e2a"/>
+        <path d="M104 180 h8 M118 180 h8" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <!-- seated figure C (right) -->
+      <g>
+        <ellipse cx="600" cy="344" rx="86" ry="20" fill="#f5e211" stroke="#2c2e2a" stroke-width="3"/>
+        <path d="M556 344 C556 276 576 236 600 236 C624 236 644 276 644 344 Z" fill="#ff705d" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M558 328 C534 322 518 334 516 344 C528 348 546 346 560 340" fill="#ff705d" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M642 328 C666 322 682 334 684 344 C672 348 654 346 640 340" fill="#ff705d" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="600" cy="206" r="32" fill="#f5f1e4" stroke="#2c2e2a" stroke-width="3"/>
+        <path d="M600 174 C628 174 634 194 630 208 C618 192 582 192 570 208 C566 194 572 174 600 174 Z" fill="#2c2e2a"/>
+        <path d="M589 210 h8 M605 210 h8" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M592 224 q8 7 16 0" stroke="#2c2e2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- butterflies -->
+      <g stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round">
+        <path d="M470 96 C446 66 414 72 416 96 C414 120 446 126 470 96 Z" fill="#8ed462"/>
+        <path d="M470 96 C494 66 526 72 524 96 C526 120 494 126 470 96 Z" fill="#f5e211"/>
+        <path d="M470 82 V112" stroke-linecap="round"/>
+      </g>
+      <g stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round">
+        <path d="M770 176 C754 156 732 160 733 176 C732 192 754 196 770 176 Z" fill="#2ba0ff"/>
+        <path d="M770 176 C786 156 808 160 807 176 C808 192 786 196 770 176 Z" fill="#ff705d"/>
+      </g>
+      <!-- leaves -->
+      <path d="M880 352 C880 300 906 276 940 274 C938 320 916 350 880 352 Z" fill="#8ed462" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="196" cy="90" r="12" fill="#ff705d" stroke="#2c2e2a" stroke-width="3"/>
+      <circle cx="678" cy="118" r="9" fill="#8ed462" stroke="#2c2e2a" stroke-width="3"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ============ VOICES STRIP ============ -->
+<section class="section section--tight" aria-labelledby="voices-h">
+  <div class="wrap">
+    <p class="section-label">먼저 경험한 분들의 이야기</p>
+    <h2 class="h-md" id="voices-h">이 과정을 먼저 경험한 분들은<br>이렇게 말합니다.</h2>
+    <div class="grid grid-3" style="margin-top:40px;">
+      <figure class="quote-card" style="margin:0;">
+        <span class="quote-mark" style="background:var(--color-fresh-grass)" aria-hidden="true">”</span>
+        <p>“각 명상의 이유와 원리를 이해하면서 수련하려는 의도와 집중하는 힘이 생겼습니다.”</p>
+        <figcaption class="stamp">2025년 9월 10일 작성</figcaption>
+      </figure>
+      <figure class="quote-card" style="margin:0;">
+        <span class="quote-mark" style="background:var(--color-sky-pop)" aria-hidden="true">”</span>
+        <p>“명상에 대한 체계적인 이해가 늘었고, 삶 속에서 실천하는 습관을 안착시킬 수 있었습니다.”</p>
+        <figcaption class="stamp">2025년 8월 30일 작성</figcaption>
+      </figure>
+      <figure class="quote-card" style="margin:0;">
+        <span class="quote-mark" style="background:var(--color-sunshine-pop)" aria-hidden="true">”</span>
+        <p>“나의 상태와 의도에 맞는 명상을 선택하며 나만의 명상 루틴을 만들 수 있었습니다.”</p>
+        <figcaption class="stamp">2025년 9월 10일 작성</figcaption>
+      </figure>
+      <figure class="quote-card" style="margin:0;">
+        <span class="quote-mark" style="background:var(--color-coral-pop)" aria-hidden="true">”</span>
+        <p>“천천히 걷고 천천히 먹으니 나 자신에게 여유와 공간을 주는 느낌이 들었습니다.”</p>
+        <figcaption class="stamp">2025년 8월 30일 작성</figcaption>
+      </figure>
+      <figure class="quote-card" style="margin:0;">
+        <span class="quote-mark" style="background:var(--color-fresh-grass)" aria-hidden="true">”</span>
+        <p>“감정과 생각에 매몰되지 않고 한 걸음 떨어져 바라보며 숨을 고르는 시간이 생겼습니다.”</p>
+        <figcaption class="stamp">2025년 9월 10일 작성</figcaption>
+      </figure>
+      <figure class="quote-card" style="margin:0;">
+        <span class="quote-mark" style="background:var(--color-sky-pop)" aria-hidden="true">”</span>
+        <p>“안내자의 전문성과 체계적인 이론, 존중과 환대가 느껴져 신뢰할 수 있었습니다.”</p>
+        <figcaption class="stamp">2025년 8월 30일 작성</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <p class="section-label">과정 소개</p>
+    <h2 class="h-lg" id="about-h">K-MBSR은<br>어떤 과정인가요?</h2>
+
+    <div class="split" style="margin-top:44px;">
+      <div class="card">
+        <p style="margin-top:0;">K-MBSR은 1970년대 존 카밧진 선생님께서 개발한 MBSR(마음챙김 기반 스트레스 감소 프로그램)에 동양의 집중명상 요소와 자비명상을 추가하여 <strong>장현갑 선생님</strong>께서 개발한 한국형 MBSR입니다. <strong>(사)한국명상학회 인정 K-MBSR 기초교육 과정</strong>입니다.</p>
+        <p>몸의 감각을 알아차리는 바디스캔에서 시작해 호흡, 움직임, 생각과 감정, 관계와 일상으로 마음챙김을 확장하는 과학적이고도 체계적인 ‘알아차림’ 훈련 과정입니다.</p>
+      </div>
+      <div class="card card--sand">
+        <h3 style="letter-spacing:-0.03em;">명상 시간에만 잠시<br>편안해지는 것을 목표로<br>하지 않습니다.</h3>
+        <p style="margin-bottom:0;">스트레스를 받는 순간 몸과 마음의 반응을 더 일찍 알아차리고, 익숙한 자동반응에서 잠시 벗어나 자신에게 필요한 대응을 선택하는 힘을 기릅니다.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:44px;">
+      <p class="section-label" style="margin-bottom:10px;">수련의 흐름</p>
+      <ul class="flow">
+        <li><span class="dot" aria-hidden="true"></span>몸의 감각</li>
+        <li><span class="dot" aria-hidden="true"></span>주의의 안정과 회복</li>
+        <li><span class="dot" aria-hidden="true"></span>움직임</li>
+        <li><span class="dot" aria-hidden="true"></span>감정과 생각</li>
+        <li><span class="dot" aria-hidden="true"></span>관계와 일상</li>
+        <li><span class="dot" aria-hidden="true"></span>자애와 자율적 실천</li>
+      </ul>
+    </div>
+
+    <div class="card card--outline" style="margin-top:36px;">
+      <p style="margin:0;font-size:var(--text-subheading);line-height:1.65;">K-MBSR을 통해 기르는 알아차림의 힘은 명상실 안에 머무르지 않고, <strong>일과 관계, 코칭과 상담, 교육과 리더십</strong>의 순간으로 이어집니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THREE CAPABILITIES ============ -->
+<section class="section" aria-labelledby="cap-h">
+  <div class="wrap">
+    <p class="section-label">훈련하는 세 가지 역량</p>
+    <h2 class="h-md" id="cap-h">현존에서 시작해<br>삶으로 이어집니다.</h2>
+    <p class="lead muted" style="margin-top:18px;">마음챙김은 지금의 경험으로 돌아오는 현존에서 시작합니다. K-MBSR은 바디스캔·호흡명상·마음챙김 요가·일상 수행을 통해 이 세 가지 역량이 서로 연결되도록 체계적으로 훈련합니다.</p>
+
+    <div class="grid grid-3" style="margin-top:44px;">
+      <article class="cap">
+        <svg viewBox="0 0 120 120" width="100" height="100" aria-hidden="true">
+          <circle cx="60" cy="60" r="46" fill="#8ed462" stroke="#2c2e2a" stroke-width="3"/>
+          <circle cx="60" cy="60" r="26" fill="#f5f1e4" stroke="#2c2e2a" stroke-width="3"/>
+          <circle cx="60" cy="60" r="8" fill="#2c2e2a"/>
+        </svg>
+        <h3>현존</h3>
+        <p>지금 이 순간의 경험으로 돌아옵니다. 판단하기 전에 먼저 알아차리는 자리를 마련합니다.</p>
+      </article>
+      <article class="cap">
+        <svg viewBox="0 0 120 120" width="100" height="100" aria-hidden="true">
+          <path d="M60 100 C24 78 20 52 34 38 C46 26 58 34 60 44 C62 34 74 26 86 38 C100 52 96 78 60 100 Z" fill="#ff705d" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M26 66 h20 l8 -16 l10 30 l8 -18 h22" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>소매틱 알아차림</h3>
+        <p>현존이 몸으로 향하면 긴장과 호흡, 감정의 미세한 변화를 감지하는 감각이 깊어집니다.</p>
+      </article>
+      <article class="cap">
+        <svg viewBox="0 0 120 120" width="100" height="100" aria-hidden="true">
+          <path d="M22 96 H98" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M44 96 C44 60 50 44 60 44 C70 44 76 60 76 96 Z" fill="#2ba0ff" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="60" cy="28" r="14" fill="#f5e211" stroke="#2c2e2a" stroke-width="3"/>
+          <path d="M46 62 C30 68 26 84 30 94" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M74 62 C90 68 94 84 90 94" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <h3>임바디먼트</h3>
+        <p>알아차림이 말과 선택, 관계와 행동을 변화시킬 때 마음챙김은 삶 속의 임바디먼트가 됩니다.</p>
+      </article>
+    </div>
+
+    <div class="card" style="margin-top:36px;">
+      <h3>명상을 아는 것에서, 몸과 삶으로 살아내는 단계까지.</h3>
+      <p style="margin-bottom:0;">상담·코칭·교육 현장에서 마음챙김을 깊이 있게 활용하고 싶은 전문가와, 자신의 마음챙김 기반을 체계적으로 다지고 싶은 분들을 초대합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEACHER ============ -->
+<section class="section" id="teacher" aria-labelledby="teacher-h">
+  <div class="wrap">
+    <p class="section-label">명상 안내자 소개</p>
+    <h2 class="h-md" id="teacher-h">🦋 송영미 박사</h2>
+
+    <div class="split split--art" style="margin-top:40px;align-items:start;">
+      <div class="art-slot teacher-photo">
+       <div class="portrait" id="portrait">
+        <img src="assets/teacher.jpg" alt="송영미 박사 인물 사진" onerror="document.getElementById('portrait').classList.add('is-fallback')">
+        <svg class="fallback" viewBox="0 0 260 260" aria-hidden="true">
+          <circle cx="130" cy="130" r="116" fill="#f5f1e4" stroke="#2c2e2a" stroke-width="3"/>
+          <path d="M130 236 C86 236 56 216 48 196 C62 168 96 154 130 154 C164 154 198 168 212 196 C204 216 174 236 130 236 Z" fill="#8ed462" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="130" cy="106" r="46" fill="#ffffff" stroke="#2c2e2a" stroke-width="3"/>
+          <path d="M130 58 C168 58 178 84 174 108 C170 90 156 82 130 82 C104 82 90 90 86 108 C82 84 92 58 130 58 Z" fill="#2c2e2a"/>
+          <path d="M112 108 q7 7 14 0 M136 108 q7 7 14 0" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M120 128 q10 9 20 0" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M196 62 C182 44 162 48 163 62 C162 76 182 80 196 62 Z" fill="#f5e211" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M196 62 C210 44 230 48 229 62 C230 76 210 80 196 62 Z" fill="#2ba0ff" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+       </div>
+        <p class="name">Youngmi Song, Ph.D.</p>
+        <p class="role">Mindful Leadership Educator &amp; Coach</p>
+      </div>
+
+      <div class="card">
+        <p style="margin-top:0;font-size:var(--text-subheading);line-height:1.6;letter-spacing:-0.02em;">“명상을 잘하는 방법보다, 지금의 경험과 새로운 방식으로 관계 맺는 법을 함께 연습합니다.”</p>
+        <ul class="credentials">
+          <li>건강심리학 석사 / IT심리 박사</li>
+          <li>한국명상학회 명상지도전문가 R급</li>
+          <li>한국심리학회 건강심리전문가</li>
+          <li>한국코치협회 KPC</li>
+          <li>기업 및 전문직 대상 마음챙김 교육 개발·운영, 경영진 명상코칭</li>
+          <li>MBSR·마음챙김·컴패션 기반 박사논문과 프로그램 기획·운영</li>
+          <li>상담·코칭·교육 현장과 명상 연결 경험</li>
+          <li>삼성그룹 사내 ‘삼성명상지도자’ 과정 슈퍼비전</li>
+        </ul>
+        <p class="muted" style="margin-top:22px;font-size:var(--text-body-sm);">이 과정은 기업과 교육 현장에서 마음챙김을 연구하고 교육해 온 송영미 박사가 진행합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section class="section" id="schedule" aria-labelledby="sched-h">
+  <div class="wrap">
+    <p class="section-label">일정 및 장소</p>
+    <h2 class="h-md" id="sched-h">🦋 일정 및 장소</h2>
+
+    <div class="sched" style="margin-top:40px;">
+      <div class="card">
+        <h3 style="letter-spacing:-0.03em;">2026년 9월 7일(월)<br>~ 10월 26일(월)</h3>
+        <ul class="sched-list">
+          <li><span class="tag tag--grass">A반</span><span>오전반 · 매주 월요일 오전 9시 – 12시</span></li>
+          <li><span class="tag tag--sky">B반</span><span>저녁반 · 매주 월요일 저녁 7시 – 10시</span></li>
+          <li><span class="tag tag--coral">필수</span><span>대면 집중수련 · 10월 17일(토) 낮 12시 – 오후 6시<br><span class="muted" style="font-size:15px;">오전반·저녁반 통합 운영</span></span></li>
+          <li><span class="tag tag--sun">휴강</span><span>10월 5일(월), 10월 19일(월) 수업 없음</span></li>
+        </ul>
+      </div>
+      <div class="card card--sand">
+        <h3>장소</h3>
+        <p>온라인 수업은 <strong>Zoom</strong>으로 진행하고, 대면 집중수련은 <strong>서울</strong>에서 진행합니다.</p>
+        <p class="muted" style="font-size:var(--text-body-sm);margin-bottom:0;">대면 장소는 등록자에게 추후 안내합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURRICULUM ============ -->
+<section class="section" id="curriculum" aria-labelledby="cur-h">
+  <div class="wrap">
+    <p class="section-label">📌 7회기 커리큘럼</p>
+    <h2 class="h-md" id="cur-h">온라인 6회, 1일 대면 수련으로<br>구성된 7회기 과정</h2>
+
+    <div class="table-scroll" style="margin-top:40px;">
+      <table>
+        <caption class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">K-MBSR 7회기 커리큘럼</caption>
+        <thead>
+          <tr><th scope="col">회기 · 일정</th><th scope="col">진행 방식</th><th scope="col">주요 명상</th><th scope="col">수련 초점</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="session-no">1회기</span><span class="session-date">9월 7일 (월)</span></td>
+            <td><span class="mode mode--online">온라인</span></td>
+            <td>먹기명상, 바디스캔</td>
+            <td>자동조종 자각과 감각 알아차림의 시작</td>
+          </tr>
+          <tr>
+            <td><span class="session-no">2회기</span><span class="session-date">9월 14일 (월)</span></td>
+            <td><span class="mode mode--online">온라인</span></td>
+            <td>바디스캔, 호흡명상</td>
+            <td>주의 유지와 주의 회복</td>
+          </tr>
+          <tr>
+            <td><span class="session-no">3회기</span><span class="session-date">9월 21일 (월)</span></td>
+            <td><span class="mode mode--online">온라인</span></td>
+            <td>정좌명상 1 (호흡·몸·감각 알아차림)</td>
+            <td>정적 주의의 안정과 불편함에 머무르기</td>
+          </tr>
+          <tr>
+            <td><span class="session-no">4회기</span><span class="session-date">9월 28일 (월)</span></td>
+            <td><span class="mode mode--online">온라인</span></td>
+            <td>움직임 명상 (요가 명상)</td>
+            <td>정적인 알아차림을 움직임으로 확장</td>
+          </tr>
+          <tr>
+            <td><span class="session-no">5회기</span><span class="session-date">10월 12일 (월)</span></td>
+            <td><span class="mode mode--online">온라인</span></td>
+            <td>정좌명상 2 (생각·감정·열린 알아차림)</td>
+            <td>생각·감정에 대한 열린 알아차림과 스트레스 대응</td>
+          </tr>
+          <tr>
+            <td><span class="session-no">6회기</span><span class="session-date">10월 17일 (토)</span></td>
+            <td><span class="mode mode--offline">대면</span><span class="session-date">서울 · 추후 안내</span></td>
+            <td>정좌명상 1·2, 걷기명상, 마음챙김 대화, 자애명상</td>
+            <td>수련의 통합, 관계 속 마음챙김, 친절한 태도</td>
+          </tr>
+          <tr>
+            <td><span class="session-no">7회기</span><span class="session-date">10월 26일 (월)</span></td>
+            <td><span class="mode mode--online">온라인</span></td>
+            <td>산명상, 향후 실천계획</td>
+            <td>전체 경험의 통합과 자율적 실천</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE ============ -->
+<section class="section" id="price" aria-labelledby="price-h">
+  <div class="wrap">
+    <p class="section-label">🦋 비용과 할인</p>
+    <h2 class="h-md" id="price-h">비용 안내</h2>
+
+    <div class="price-row" style="margin-top:40px;">
+      <div class="price-box">
+        <p class="k">정가</p>
+        <p class="v">600,000원</p>
+        <p class="n">VAT 별도</p>
+      </div>
+      <div class="price-box price-box--early">
+        <p class="k">얼리버드 · 8월 20일 → <strong>8월 31일까지 연장</strong></p>
+        <p class="v">500,000원</p>
+        <p class="n"><span class="strike">600,000원</span> · VAT 별도</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px;">
+      <h3>🦋 환불 규정</h3>
+      <ul class="credentials">
+        <li>2026년 8월 31일까지 취소: 전액 환불</li>
+        <li>9월 1일 ~ 9월 6일 취소: 교육비의 50% 환불</li>
+        <li>9월 7일 오픈 당일 이후: 환불 불가</li>
+      </ul>
+      <p class="muted" style="font-size:var(--text-body-sm);margin-top:20px;margin-bottom:0;">환불 시 송금 또는 결제 수수료는 공제될 수 있습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPLY ============ -->
+<section class="section" id="apply" aria-labelledby="apply-h">
+  <div class="wrap">
+    <div class="apply">
+      <p class="section-label" style="color:var(--color-hairline-mist);">🦋 신청하기</p>
+      <h2 class="h-md" id="apply-h">세 단계로<br>등록이 완료됩니다.</h2>
+      <div style="margin-top:40px;">
+        <ol class="steps">
+          <li><span>아래 구글폼에 신청서를 작성합니다.</span></li>
+          <li><span>신청 내용을 확인한 뒤 <strong>&lt;등록 및 결제 안내 문자&gt;</strong>를 보내드립니다.</span></li>
+          <li><span>결제가 확인되면 최종 등록이 완료됩니다.</span></li>
+        </ol>
+        <div style="margin-top:36px;padding-top:30px;border-top:1px solid rgba(213,213,212,.35);">
+          <a class="btn btn--coral" href="https://forms.gle/xLKSjfiTWXCfSqFx9" target="_blank" rel="noopener">K-MBSR 참여 신청서 작성하기 <span class="dot dot--white" aria-hidden="true"></span></a>
+          <p class="muted" style="margin-top:20px;font-size:var(--text-body-sm);">신청서 작성은 구글폼에서 진행되며, 새 창에서 열립니다. 정원이 마감되면 조기에 신청이 종료될 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section" id="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <p class="section-label">🦋 참여자 후기</p>
+    <h2 class="h-lg" id="rev-h">참여자들이 말하는<br>여섯 가지 변화</h2>
+
+    <div class="review-group">
+      <h3><span class="num">1</span>마음챙김의 원리와 체계를 이해하게 되었습니다</h3>
+      <div class="grid grid-3">
+        <figure class="quote-card" style="margin:0;"><p>“명상을 하다 보면 ‘왜 이렇게 해야 하지?’라는 물음이 올라오곤 했습니다. 각 명상의 이유와 원리를 세세하게 안내받으면서 수련하려는 의도와 집중하는 힘이 생겼습니다.”</p><figcaption class="stamp">2025년 9월 10일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“명상을 체계적으로 배우고 역사와 원리를 알아가는 시간이 정말 중요하다는 것을 느꼈습니다. 알고 있던 명상도 좌법이나 호흡 수 세기 등을 더 세밀하게 이해할 수 있었습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“명상에 대한 체계적인 이해가 늘었고, 삶 속에서 실천하는 습관을 안착시킬 수 있었습니다. 마지막 대면 수업에서는 여러 사람과 다양한 명상을 경험하고 요가명상까지 실습할 수 있어 좋았습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="review-group">
+      <h3><span class="num">2</span>나에게 맞는 수련의 기본기를 갖게 되었습니다</h3>
+      <div class="grid grid-3">
+        <figure class="quote-card" style="margin:0;"><p>“‘나만의 명상 루틴 만들기’를 통해 나의 상태와 의도에 맞는 명상을 선택할 수 있었습니다. 이전에는 ‘오늘은 무슨 명상을 하지?’라고 생각했다면, 이제는 보다 명료하게 명상을 선택하고 수련하게 되었습니다.”</p><figcaption class="stamp">2025년 9월 10일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“명상에 대한 재정리를 할 수 있었고, 꾸준한 명상 수련 루틴을 형성하기 위한 초석이 되었습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“명상의 기본기와 다양한 실습을 경험할 수 있었습니다. 처음 세운 목표는 과정 중에 달라졌지만, 개인적인 훈련과 성장에 큰 도움이 되었습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="review-group">
+      <h3><span class="num">3</span>알아차림이 몸과 일상의 변화로 이어졌습니다</h3>
+      <div class="grid grid-2">
+        <figure class="quote-card" style="margin:0;"><p>“걷기명상과 먹기명상을 경험하면서 새로운 즐거움과 알아차림이 생겼습니다. 천천히 걷고 천천히 먹으니 나 자신에게 여유와 공간을 주는 느낌이 들어 좋았습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“호흡명상을 통해 집중력과 통찰력을 기를 수 있었고, 바디스캔은 수면과 건강에 도움이 되었습니다. 일상에서도 감사한 마음을 다시 알아차리고 표현하게 되었습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“수면 습관을 개선하기 위해 명상을 실천하고 있습니다. 명상이 자기조절력을 기르는 데 도움이 되었고, 체계적인 이론을 함께 배울 수 있어 유익했습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“일상생활 중간 중간 나 자신을 파악하는 능력이 생겼습니다. 죄책감을 조금 덜어내고 스트레스를 관리하는 데에도 도움이 되었습니다.”</p><figcaption class="stamp">2025년 9월 4일</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="review-group">
+      <h3><span class="num">4</span>감정과 관계를 바라보는 방식이 달라졌습니다</h3>
+      <div class="grid grid-3">
+        <figure class="quote-card" style="margin:0;"><p>“감정과 생각을 관찰하는 사람으로서 조금 더 거리를 둘 수 있게 되었습니다. 일상에서도 상황에 매몰되지 않고 잠시 멈춰 숨을 고르는 시간이 생겼습니다.”</p><figcaption class="stamp">2025년 9월 10일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“나의 습관적인 생각과 과거의 경험이 현재의 관계에 영향을 주고 있다는 것을 알아차렸습니다. 그 이후 상대를 바라보고 대하는 방식이 달라졌습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“명상을 통해 나 자신을 조금씩 더 알아가고 있습니다. 내가 두려움을 스스로 만들어내기도 한다는 것을 발견했고, 지금도 그 경험을 계속 탐구하고 있습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="review-group">
+      <h3><span class="num">5</span>전문가로서의 수련 기반을 다질 수 있었습니다</h3>
+      <div class="grid grid-3">
+        <figure class="quote-card" style="margin:0;"><p>“코치다움의 역량을 키우는 데 매우 효과적인 과정이라고 생각합니다. 참여 동기가 충분히 충족되었고, 앞으로도 명상을 일상화해 나가고 싶습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“제가 연구하려는 주제에도 많은 도움이 되었습니다. 이론을 바탕으로 다양한 명상을 직접 경험할 수 있어 더욱 유익했습니다.”</p><figcaption class="stamp">2025년 9월 4일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“명상에 대한 체계적인 지식을 얻고 싶다는 목표를 달성했습니다. 특히 명상일지에 대한 피드백이 도움이 되었습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="review-group">
+      <h3><span class="num">6</span>전문성과 존중이 느껴지는 안내였습니다</h3>
+      <div class="grid grid-3">
+        <figure class="quote-card" style="margin:0;"><p>“안내자의 전문성과 체계적인 이론이 특히 유용했습니다. 과정 전체에 존중과 환대가 녹아 있어 신뢰감을 느낄 수 있었습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“편안한 목소리로 너무 애쓰지 않으면서도 주의를 기울일 수 있도록 안내해 주어 좋았습니다.”</p><figcaption class="stamp">2025년 8월 30일</figcaption></figure>
+        <figure class="quote-card" style="margin:0;"><p>“설명이 이해하기 쉽게 전달되었고, 편안한 목소리 덕분에 명상에 집중하는 데 도움이 되었습니다. 잠깐 멈춤 카드를 활용하면서 일상에서 나를 알아차리는 것이 습관이 되었습니다.”</p><figcaption class="stamp">2025년 9월 4일</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <p class="section-label">자주 묻는 질문</p>
+    <h2 class="h-md" id="faq-h">FAQ</h2>
+
+    <div class="faq" style="margin-top:40px;">
+      <details open>
+        <summary>명상 초보자도 참여할 수 있나요?</summary>
+        <p>네, 가능합니다.</p>
+      </details>
+      <details>
+        <summary>매주 과제가 있나요?</summary>
+        <p>네, 있습니다. 매주 2–3회는 수련 일지(온라인)를 제출합니다.</p>
+      </details>
+      <details>
+        <summary>매일 어느 정도 수련해야 하나요?</summary>
+        <p>5분부터 점차 늘려가시기를 권합니다.</p>
+      </details>
+      <details>
+        <summary>대면 집중수련은 반드시 참석해야 하나요?</summary>
+        <p>수료를 위해 필수입니다.</p>
+      </details>
+      <details>
+        <summary>수료 기준은 무엇인가요?</summary>
+        <p>90% 출석과 과제 제출이 충족되어야 합니다.</p>
+      </details>
+      <details>
+        <summary>상담·코칭 현장에 바로 적용할 수 있나요?</summary>
+        <p>개인 수련과 적용 목적에 따라 다를 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>수료하면 어떤 자격이 인정되나요?</summary>
+        <p>수료 기준 충족 시 (사)한국명상학회 기초교육 이수증이 발급되며, 명상지도전문가 T급 자격과정의 기초교육 24시간으로 인정됩니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--tight" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="card">
+      <p class="section-label">🦋 문의하기</p>
+      <h2 class="h-md" id="contact-h" style="margin-bottom:0;">궁금한 점이 있으신가요?</h2>
+      <ul class="contact-list">
+        <li><span class="k">카카오</span><span>(조이캄) 카카오 채널 친구추가: <a href="http://pf.kakao.com/_pNhxnX" target="_blank" rel="noopener">조이캄</a></span></li>
+        <li><span class="k">이메일</span><a href="mailto:joycalm.biz@gmail.com">joycalm.biz@gmail.com</a></li>
+        <li><span class="k">전화</span><a href="tel:01095899988">010-9589-9988</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-band">
+  <div class="wrap">
+    <p class="section-label" style="color:var(--color-ink-black);">지금, 여기에서 시작하세요</p>
+    <p class="display-ko" style="margin-top:0;">알아차림은<br>연습할 수 있습니다.</p>
+    <a class="btn btn--outline" href="https://forms.gle/xLKSjfiTWXCfSqFx9" target="_blank" rel="noopener">K-MBSR 참여 신청서 <span class="dot" aria-hidden="true"></span></a>
+
+    <div class="footer-grid">
+      <p>K-MBSR 기초교육 과정 · 조이캄(JoyCalm)<br>(사)한국명상학회 인정 기초교육 · 진행 송영미 박사</p>
+      <div class="footer-links">
+        <a href="#curriculum">커리큘럼</a>
+        <a href="#schedule">일정</a>
+        <a href="#price">비용</a>
+        <a href="mailto:joycalm.biz@gmail.com">문의</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#apply">신청하기 <span class="dot dot--white" aria-hidden="true"></span></a>
+</div>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var panel = document.getElementById('navPanel');
+  if(!btn || !panel) return;
+  btn.addEventListener('click', function(){
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    btn.setAttribute('aria-label', open ? '메뉴 열기' : '메뉴 닫기');
+  });
+  panel.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      btn.setAttribute('aria-expanded','false');
+      btn.setAttribute('aria-label','메뉴 열기');
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav')){
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body>
+</html>
