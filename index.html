@@ -87,15 +87,35 @@ a{color:inherit;}
   background:var(--color-pure-white);
   border-radius:var(--radius-full);
   display:flex;align-items:center;gap:8px;
-  padding:9px 9px 9px 20px;
+  padding:9px;
 }
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.brand{
+  display:inline-flex;align-items:center;gap:9px;
+  text-decoration:none;flex-shrink:0;
+  background:var(--color-cream-paper);
+  border-radius:var(--radius-full);
+  padding:6px 18px 6px 6px;min-height:45px;
+  transition:background .18s ease;
+}
+.brand:hover{background:var(--color-sandstone);}
 .brand-mark{
-  width:40px;height:40px;border-radius:var(--radius-small);
+  width:32px;height:32px;border-radius:50%;
   background:var(--color-fresh-grass);
-  display:grid;place-items:center;font-size:20px;line-height:1;
+  display:grid;place-items:center;font-size:17px;line-height:1;
 }
 .brand-name{font-size:17px;font-weight:500;letter-spacing:-0.01em;white-space:nowrap;}
+.brand-link{
+  display:inline-flex;align-items:center;gap:7px;
+  flex-shrink:0;
+  background:var(--color-cream-paper);
+  border-radius:var(--radius-full);
+  padding:11px 16px 11px 18px;
+  font-size:var(--text-body-sm);font-weight:500;text-decoration:none;
+  color:var(--color-ink-black);white-space:nowrap;
+  transition:background .18s ease;
+}
+.brand-link:hover{background:var(--color-sandstone);}
+.brand-link .dot{background:var(--color-coral-pop);}
 .nav-links{display:flex;align-items:center;margin-left:auto;}
 .nav-links a{
   font-size:var(--text-body-sm);font-weight:500;text-decoration:none;
@@ -393,6 +413,7 @@ details p{margin:14px 0 0;font-size:17px;line-height:1.6;padding-left:0;}
   .nav-panel a:hover{background:var(--color-cream-paper);}
   .nav{position:relative;}
   .nav-cta{display:none;}
+  .brand-link{display:none;}
   .grid-3{grid-template-columns:repeat(2,1fr);}
   .split,.split--art,.sched{grid-template-columns:1fr;}
   .split--art .art-slot{order:-1;}
@@ -432,6 +453,7 @@ details p{margin:14px 0 0;font-size:17px;line-height:1.6;padding-left:0;}
       <span class="brand-mark" aria-hidden="true">🦋</span>
       <span class="brand-name">K-MBSR</span>
     </a>
+    <a class="brand-link" href="https://saddleppo-hub.github.io/joycalm-landing/" target="_blank" rel="noopener">조이캄 <span class="dot" aria-hidden="true"></span></a>
     <div class="nav-links">
       <a href="#about">과정 소개</a>
       <a href="#teacher">안내자</a>
@@ -451,6 +473,7 @@ details p{margin:14px 0 0;font-size:17px;line-height:1.6;padding-left:0;}
       <a href="#reviews">후기</a>
       <a href="#faq">FAQ</a>
       <a href="#apply">신청하기</a>
+      <a href="https://saddleppo-hub.github.io/joycalm-landing/" target="_blank" rel="noopener">조이캄 바로가기 ↗</a>
     </div>
     <a class="nav-cta" href="#apply">신청하기 <span class="dot" aria-hidden="true"></span></a>
   </nav>
