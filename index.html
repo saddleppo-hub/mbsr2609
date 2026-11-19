@@ -614,12 +614,12 @@ details[open] summary:hover::after{transform:rotate(45deg) scale(1.18);}
 /* 안내자 사진: 세로 사진을 원형 프레임에 얼굴 중심으로 크롭 */
 .portrait img{
   position:absolute;inset:0;width:100%;height:100%;max-width:none;
-  object-fit:cover;object-position:50% 10%;
-  --pz:1.5;
-  transform:scale(var(--pz)) translateX(-11%);
+  object-fit:cover;object-position:50% 8%;
+  --pz:1.25;
+  transform:scale(var(--pz)) translateX(-10%);
 }
 .portrait img,.portrait .fallback{transition:transform .9s var(--ease-soft);}
-.teacher-photo:hover .portrait img{--pz:1.6;}
+.teacher-photo:hover .portrait img{--pz:1.33;}
 .teacher-photo:hover .portrait .fallback{transform:scale(1.07);}
 .contact-list li{transition:transform .28s var(--ease-soft);}
 .contact-list li:hover{transform:translateX(6px);}
@@ -991,7 +991,7 @@ details[open] summary:hover::after{transform:rotate(45deg) scale(1.18);}
     <div class="split split--art" style="margin-top:40px;align-items:start;">
       <div class="art-slot teacher-photo">
        <div class="portrait" id="portrait">
-        <img src="assets/teacher.jpg" alt="송영미 박사 인물 사진" onerror="document.getElementById('portrait').classList.add('is-fallback')">
+        <img src="assets/teacher.webp" alt="싱잉볼을 들고 있는 송영미 박사" onerror="document.getElementById('portrait').classList.add('is-fallback')">
         <svg class="fallback" viewBox="0 0 260 260" aria-hidden="true">
           <circle cx="130" cy="130" r="116" fill="#f5f1e4" stroke="#2c2e2a" stroke-width="3"/>
           <path d="M130 236 C86 236 56 216 48 196 C62 168 96 154 130 154 C164 154 198 168 212 196 C204 216 174 236 130 236 Z" fill="#8ed462" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round"/>
