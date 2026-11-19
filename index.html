@@ -24,11 +24,25 @@
 <meta name="twitter:description" content="(사)한국명상학회 인정 K-MBSR 기초교육 과정 · 2027.1.7~2.18 · 온라인 6회 + 대면 집중수련 1회 · 송영미 박사 진행">
 <meta name="twitter:image" content="https://mbsr2609.vercel.app/assets/og-image.png">
 <link rel="canonical" href="https://mbsr2609.vercel.app/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦋</text></svg>">
 <style>
+/* ---------- 페이퍼로지 (Paperlogy) · SIL OFL ---------- */
+@font-face{
+  font-family:'Paperozi';
+  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+  font-weight:400;font-display:swap;
+}
+@font-face{
+  font-family:'Paperozi';
+  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+  font-weight:500;font-display:swap;
+}
+@font-face{
+  font-family:'Paperozi';
+  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+  font-weight:700;font-display:swap;
+}
 :root{
   --color-fresh-grass:#8ed462;
   --color-cream-paper:#f5f1e4;
@@ -42,7 +56,7 @@
   --color-coral-pop:#ff705d;
   --color-sunshine-pop:#f5e211;
 
-  --font-inter:'Inter','Noto Sans KR',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --font-inter:'Paperozi',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",'Malgun Gothic',Roboto,sans-serif;
 
   --text-body-sm:15px;
   --text-body-lg:18px;
@@ -72,6 +86,9 @@ body{
   line-height:1.5;
   font-weight:400;
   overflow-x:hidden;
+  /* 한글이 단어 중간에서 끊기지 않도록 어절 단위로 줄바꿈 */
+  word-break:keep-all;
+  overflow-wrap:break-word;
 }
 img,svg{max-width:100%;display:block;}
 a{color:inherit;}
